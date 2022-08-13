@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		BD7983EB28A82F6E00A7C92C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7983EA28A82F6E00A7C92C /* AppDelegate.swift */; };
-		BD7983ED28A82F6E00A7C92C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7983EC28A82F6E00A7C92C /* SceneDelegate.swift */; };
 		BD7983EF28A82F6E00A7C92C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7983EE28A82F6E00A7C92C /* ViewController.swift */; };
 		BD7983F228A82F6E00A7C92C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7983F028A82F6E00A7C92C /* Main.storyboard */; };
 		BD7983F428A82F7000A7C92C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD7983F328A82F7000A7C92C /* Assets.xcassets */; };
 		BD7983F728A82F7000A7C92C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD7983F528A82F7000A7C92C /* LaunchScreen.storyboard */; };
+		BD79840228A8304E00A7C92C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD79840128A8304E00A7C92C /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		BD7983E728A82F6E00A7C92C /* Coordinator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD7983EA28A82F6E00A7C92C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD7983EC28A82F6E00A7C92C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD7983EE28A82F6E00A7C92C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD7983F128A82F6E00A7C92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD7983F328A82F7000A7C92C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD7983F628A82F7000A7C92C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD7983F828A82F7000A7C92C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD79840128A8304E00A7C92C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		BD7983E928A82F6E00A7C92C /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				BD79840028A82FF300A7C92C /* Views */,
+				BD7983FE28A82FAE00A7C92C /* Coordinators */,
 				BD7983EA28A82F6E00A7C92C /* AppDelegate.swift */,
-				BD7983EC28A82F6E00A7C92C /* SceneDelegate.swift */,
-				BD7983EE28A82F6E00A7C92C /* ViewController.swift */,
 				BD7983F028A82F6E00A7C92C /* Main.storyboard */,
 				BD7983F328A82F7000A7C92C /* Assets.xcassets */,
 				BD7983F528A82F7000A7C92C /* LaunchScreen.storyboard */,
 				BD7983F828A82F7000A7C92C /* Info.plist */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BD7983FE28A82FAE00A7C92C /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				BD7983FF28A82FC100A7C92C /* Protocols */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		BD7983FF28A82FC100A7C92C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BD79840128A8304E00A7C92C /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BD79840028A82FF300A7C92C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD7983EE28A82F6E00A7C92C /* ViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +164,7 @@
 			files = (
 				BD7983EF28A82F6E00A7C92C /* ViewController.swift in Sources */,
 				BD7983EB28A82F6E00A7C92C /* AppDelegate.swift in Sources */,
-				BD7983ED28A82F6E00A7C92C /* SceneDelegate.swift in Sources */,
+				BD79840228A8304E00A7C92C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +318,6 @@
 				INFOPLIST_FILE = Coordinator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,7 +329,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -322,7 +345,6 @@
 				INFOPLIST_FILE = Coordinator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +356,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
